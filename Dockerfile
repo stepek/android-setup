@@ -6,7 +6,7 @@ LABEL maintainer="Kamil Stepczuk"
 # Install nodejs
 RUN apt-get update
 RUN apt-get -y install curl gnupg
-RUN curl -sL https://deb.nodesource.com/setup_10.x  | bash -
+RUN curl -sL https://deb.nodesource.com/setup_14.x  | bash -
 RUN apt-get -y install nodejs
 RUN echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf
 RUN sysctl -p
